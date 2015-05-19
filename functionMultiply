@@ -1,0 +1,6 @@
+#lang racket
+(define (multiplyMatrices M1 M2)
+  (map (lambda (row) (apply map (lambda column (apply + (map * row column))) M2))
+   M1
+  )
+)
